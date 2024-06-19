@@ -8,7 +8,7 @@
     </button>
 
     <nav class="nav-primary hidden md:flex w-full justify-end">
-      <ul class="flex flex-col md:flex-row gap-10 md:gap-0 md:w-[90%] lg:w-[70%] xl:w-[60%] justify-center md:justify-between items-center text-[22px] md:text-5">
+      <ul class="flex flex-col md:flex-row gap-10 md:gap-4 lg:gap-14 justify-center md:justify-between items-center text-[22px] md:text-[1.25rem]">
         <li>
           <a href="#">About</a>
         </li>
@@ -21,7 +21,7 @@
         <li>
           <a href="#">Contact</a>
         </li>
-        <button class="bg-light-blue px-4 py-3 rounded-full text-[18px] md:text-[22px]">(205) 480-2083</button>
+        <button class="bg-light-blue px-4 py-3 rounded-full text-[18px] md:text-[1.25rem]">(205) 480-2083</button>
       </ul>
     </nav>
   </div>

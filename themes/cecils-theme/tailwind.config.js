@@ -2,6 +2,9 @@
 const config = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
+    container: {
+      padding: '2rem',
+    },
     extend: {
       colors: {
         'white': '#fff',
@@ -15,7 +18,7 @@ const config = {
       fontFamily: {
         sans: 'Open Sans, sans-serif',
         pill: 'Pill Gothic, sans-serif',
-      }
+      },
     },
   },
   plugins: [],
