@@ -1,0 +1,10 @@
+@import 'common/fonts.css';
+@import 'sections/header';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+}

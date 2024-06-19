@@ -1,0 +1,79 @@
+header.banner {
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+
+  &.open {
+    @apply h-screen;
+    @media (screen(md)) {
+      @apply h-min;
+    }
+  }
+
+  .cecils-logo {
+    width: 206px;
+    height: 58px;
+  }
+
+  .nav-toggle {
+    @apply flex;
+    @apply md:hidden;
+    @apply items-center;
+    height: 23px;
+
+    .nav-toggle-icon {
+      display: inline-block;
+      width: 2rem;
+      height: 1px;
+      @apply bg-light-blue;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 2rem;
+        left: 0;
+        @apply bg-light-blue;
+        transition: all 0.5s;
+      }
+
+      &:before {
+        top: -10px;
+      }
+
+      &:after {
+        top: 10px;
+      }
+
+      &.close {
+        background: none;
+
+        &:after {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+
+        &:before {
+          transform: translateY(10px) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .nav-primary {
+    &.open {
+      @apply block;
+      @apply absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (screen(md)) {
+        @apply static;
+        transform: none;
+        display: flex;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
