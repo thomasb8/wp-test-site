@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ .industry-block {
+	@apply flex;
+	@apply flex-col;
+	@apply text-gray-300;
+	img {
+		@apply aspect-square;
+		@apply object-cover;
+		@apply object-top;
+	}
+	.industry-headline {
+		@apply font-pill;
+		@apply text-[1.375rem];
+		@apply mt-8;
+		@apply mb-4;
+		@media (screen(md)) {
+			@apply text-[1.75rem];
+			@apply mt-[3.125rem];
+			@apply mb-9;
+		}
+	}
+	.industry-description {
+		@apply font-sans;
+		@apply text-base;
+		@apply leading-5;
+		
+		@media (screen(md)) {
+			@apply w-2/3;
+			@apply text-[1.125rem];
+			@apply leading-6;
+		}
+	}
+ }

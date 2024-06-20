@@ -33,19 +33,19 @@ import './editor.scss';
 import { Button, PanelBody, TextControl } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { imageSrc, headlineText, ctaLink, ctaText } = attributes;
+	const { imageSrc, imageAlt, headlineText, ctaLink, ctaText } = attributes;
 	const blockProps = useBlockProps({
 		className: 'w-full h-screen'
 	})
 	return (
 		<div {...blockProps}>
-			<img src={imageSrc} className='absolute w-full h-full object-cover -z-[1]' alt="asd"></img>
+			<img src={imageSrc} className='absolute w-full h-full object-cover -z-[1]' alt={imageAlt}></img>
 			<div className='overlay'></div>
 			<div className='banner-content'>
 				<InspectorControls>
 					<PanelBody title={__('Image Settings', 'banner-block')}>
 						<MediaUpload
-							onSelect={(media) => setAttributes({ imageSrc: media.url })}
+							onSelect={(media) => setAttributes({ imageSrc: media.url, imageAlt: media.alt })}
 							type="image"
 							render={({ open }) => (
 								<Button onClick={open} variant='secondary' isLarge>
