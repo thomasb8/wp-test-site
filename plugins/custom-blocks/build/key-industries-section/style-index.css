@@ -1,6 +1,6 @@
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/banner-block/style.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/key-industries-section/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
 /**
  * The following styles get applied both on the front of your site
  * and in the editor.
@@ -465,12 +465,6 @@ video {
 .auto-rows-max {
   grid-auto-rows: max-content;
 }
-.gap-y-\[\] {
-  row-gap: ;
-}
-.gap-y-\[3\] {
-  row-gap: 3;
-}
 .gap-y-\[3\.75rem\] {
   row-gap: 3.75rem;
 }
@@ -478,139 +472,65 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.banner-content {
+.key-industries-section-container {
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 @media (min-width: 640px) {
-  .banner-content {
+  .key-industries-section-container {
     max-width: 640px;
   }
 }
 @media (min-width: 768px) {
-  .banner-content {
+  .key-industries-section-container {
     max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
-  .banner-content {
+  .key-industries-section-container {
     max-width: 1024px;
   }
 }
 @media (min-width: 1280px) {
-  .banner-content {
+  .key-industries-section-container {
     max-width: 1280px;
   }
 }
 @media (min-width: 1536px) {
-  .banner-content {
+  .key-industries-section-container {
     max-width: 1536px;
   }
 }
-.banner-content {
+.key-industries-section-container {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  height: 100%;
+  padding-top: 42px;
+  padding-bottom: 98px;
+  --tw-text-opacity: 1;
+  color: rgb(65 65 65 / var(--tw-text-opacity));
+}
+@media ((min-width: 768px)) {
+  .key-industries-section-container {
+    padding-top: 147px;
+    padding-bottom: 164px;
+  }
+}
+
+.key-industries-headline {
   font-family: Pill Gothic, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding-bottom: 4rem;
+  font-size: 1.375rem;
+  padding-bottom: 42px;
 }
 @media ((min-width: 768px)) {
-  .banner-content {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding-bottom: 5rem;
-  }
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(62 62 62 / var(--tw-bg-opacity));
-  opacity: 0.55;
-  z-index: -1;
-}
-
-.headline {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 50px;
-  letter-spacing: -1.65px;
-}
-@media ((min-width: 768px)) {
-  .headline {
-    font-size: 80px;
-    line-height: 64px;
-    letter-spacing: -1.65px;
-  }
-}
-@media ((min-width: 1024px)) {
-  .headline {
-    font-size: 120px;
-    line-height: 96px;
-    letter-spacing: -1.65px;
-  }
-}
-@media ((min-width: 1280px)) {
-  .headline {
-    font-size: 150px;
-    line-height: 120px;
-    letter-spacing: -4.5px;
-  }
-}
-
-.cta-button {
-  display: block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  width: 140px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-size: 1.125rem;
-  text-align: center;
-  --tw-border-opacity: 1;
-  border-color: rgb(20 160 250 / var(--tw-border-opacity));
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 9999px;
-  line-height: 1;
-  text-decoration-line: none;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.cta-button:hover {
-  cursor: pointer;
-}
-
-.cta-button {
-  margin-top: 55px;
-}
-@media ((min-width: 768px)) {
-  .cta-button {
-    width: 175px;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+  .key-industries-headline {
+    font-size: 1.75rem;
+    padding-bottom: 77px;
   }
 }
 @media (min-width: 768px) {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .md\:gap-\[10rem\] {
-    gap: 10rem;
   }
   .md\:gap-y-\[10rem\] {
     row-gap: 10rem;

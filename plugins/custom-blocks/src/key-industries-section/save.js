@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -16,12 +16,13 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({ attributes }) {
-	const { imageSrc, imageAlt, industryHeadline, industryDescription } = attributes
+	const { headline } = attributes
 	return (
-		<div { ...useBlockProps.save({ className: 'industry-block'}) }>
-			<img src={imageSrc} alt={imageAlt} />
-			<h3 className='industry-headline'>{ industryHeadline }</h3>
-			<p className='industry-description'>{ industryDescription }</p>
+		<div { ...useBlockProps.save({ className: 'key-industries-section-container' }) }>
+			<h2 className="key-industries-headline">{ headline }</h2>
+			<div className='grid md:grid-cols-3 gap-y-[3.75rem] md:gap-y-[10rem] auto-rows-max'>
+				<InnerBlocks.Content />
+			</div>
 		</div>
 	);
 }

@@ -27,5 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function custom_blocks_init() {
 	register_block_type( __DIR__ . '/build/banner-block' );
     register_block_type( __DIR__ . '/build/key-industries-block' );
+	register_block_type( __DIR__ . '/build/key-industries-section' );
 }
 add_action( 'init', 'custom_blocks_init' );

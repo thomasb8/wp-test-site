@@ -450,6 +450,9 @@ video {
 .block {
   display: block;
 }
+.grid {
+  display: grid;
+}
 .h-full {
   height: 100%;
 }
@@ -458,6 +461,18 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.auto-rows-max {
+  grid-auto-rows: max-content;
+}
+.gap-y-\[\] {
+  row-gap: ;
+}
+.gap-y-\[3\] {
+  row-gap: 3;
+}
+.gap-y-\[3\.75rem\] {
+  row-gap: 3.75rem;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -499,5 +514,16 @@ video {
     width: 66.666667%;
     font-size: 1.125rem;
     line-height: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:gap-\[10rem\] {
+    gap: 10rem;
+  }
+  .md\:gap-y-\[10rem\] {
+    row-gap: 10rem;
   }
 }

@@ -1,0 +1,32 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ .key-industries-section-container {
+	@apply container;
+	@apply mx-auto;
+	@apply pt-[42px];
+	@apply pb-[98px];
+	@apply text-gray-300;
+	@media (screen(md)) {
+		@apply pt-[147px];
+		@apply pb-[164px];
+	}
+ }
+
+ .key-industries-headline {
+	@apply font-pill;
+	@apply text-[1.375rem];
+	@apply pb-[42px];
+	@media (screen(md)) {
+		@apply text-[1.75rem];
+		@apply pb-[77px];
+	}
+ }

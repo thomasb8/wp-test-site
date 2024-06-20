@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/key-industries-block/edit.js":
-/*!******************************************!*\
-  !*** ./src/key-industries-block/edit.js ***!
-  \******************************************/
+/***/ "./src/key-industries-section/edit.js":
+/*!********************************************!*\
+  !*** ./src/key-industries-section/edit.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -18,9 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/key-industries-block/editor.scss");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/key-industries-section/editor.scss");
 
 /**
  * Retrieves the translation of text.
@@ -54,102 +52,55 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 
-
 function Edit({
   attributes,
   setAttributes
 }) {
   const {
-    imageSrc,
-    imageAlt,
-    industryHeadline,
-    industryDescription
+    headline
   } = attributes;
+  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)({
+    className: 'grid md:grid-cols-3 gap-y-[3.75rem] md:gap-y-[10rem] auto-rows-max'
+  }, {
+    allowedBlocks: ['key-industries-block/key-industries-block'],
+    defaultBlock: {
+      name: 'key-industries-block/key-industries-block'
+    },
+    directInsert: true
+  });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      className: 'industry-block'
+      className: 'key-industries-section-container'
     })
-  }, !imageSrc ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Placeholder, {
-    icon: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockIcon, {
-      icon: "format-image"
-    }),
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Image block', 'key-industries-block')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
-    onSelect: media => setAttributes({
-      imageSrc: media.url,
-      imageAlt: media.alt
-    }),
-    type: "image",
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-      onClick: open,
-      variant: "secondary",
-      isLarge: true
-    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Image', 'banner-block'))
-  })) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: imageSrc,
-    alt: imageAlt
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter headline...', 'key-industries-block'),
-    value: industryHeadline,
-    className: "industry-headline",
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter headline...', 'key-industries-section'),
+    tagName: "h2",
+    allowedFormats: [],
+    value: headline,
+    className: "key-industries-headline",
     onChange: val => setAttributes({
-      industryHeadline: val
+      headline: val
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter description...', 'key-industries-block'),
-    value: industryDescription,
-    className: "industry-description",
-    onChange: val => setAttributes({
-      industryDescription: val
-    })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Image Settings', 'key-industries-block')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
-    onSelect: media => setAttributes({
-      imageSrc: media.url
-    }),
-    type: "image",
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-      onClick: open,
-      variant: "secondary",
-      isLarge: true
-    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Image', 'key-industries-block'))
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Text Settings', 'key-industries-block')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Industry headline text', 'key-industries-block'),
-    value: industryHeadline,
-    onChange: value => setAttributes({
-      industryHeadline: value
-    })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Industry description text', 'key-industries-block'),
-    value: industryDescription,
-    onChange: value => setAttributes({
-      industryDescription: value
-    })
-  }))));
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...innerBlocksProps
+  }));
 }
 
 /***/ }),
 
-/***/ "./src/key-industries-block/index.js":
-/*!*******************************************!*\
-  !*** ./src/key-industries-block/index.js ***!
-  \*******************************************/
+/***/ "./src/key-industries-section/index.js":
+/*!*********************************************!*\
+  !*** ./src/key-industries-section/index.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/key-industries-block/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/key-industries-block/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/key-industries-block/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/key-industries-block/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/key-industries-section/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/key-industries-section/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/key-industries-section/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/key-industries-section/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -191,10 +142,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/key-industries-block/save.js":
-/*!******************************************!*\
-  !*** ./src/key-industries-block/save.js ***!
-  \******************************************/
+/***/ "./src/key-industries-section/save.js":
+/*!********************************************!*\
+  !*** ./src/key-industries-section/save.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -227,31 +178,25 @@ function save({
   attributes
 }) {
   const {
-    imageSrc,
-    imageAlt,
-    industryHeadline,
-    industryDescription
+    headline
   } = attributes;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-      className: 'industry-block'
+      className: 'key-industries-section-container'
     })
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: imageSrc,
-    alt: imageAlt
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-    className: "industry-headline"
-  }, industryHeadline), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "industry-description"
-  }, industryDescription));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+    className: "key-industries-headline"
+  }, headline), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "grid md:grid-cols-3 gap-y-[3.75rem] md:gap-y-[10rem] auto-rows-max"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null)));
 }
 
 /***/ }),
 
-/***/ "./src/key-industries-block/editor.scss":
-/*!**********************************************!*\
-  !*** ./src/key-industries-block/editor.scss ***!
-  \**********************************************/
+/***/ "./src/key-industries-section/editor.scss":
+/*!************************************************!*\
+  !*** ./src/key-industries-section/editor.scss ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -260,10 +205,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/key-industries-block/style.scss":
-/*!*********************************************!*\
-  !*** ./src/key-industries-block/style.scss ***!
-  \*********************************************/
+/***/ "./src/key-industries-section/style.scss":
+/*!***********************************************!*\
+  !*** ./src/key-industries-section/style.scss ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -302,16 +247,6 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
-/***/ "@wordpress/components":
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["components"];
-
-/***/ }),
-
 /***/ "@wordpress/i18n":
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
@@ -322,13 +257,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./src/key-industries-block/block.json":
-/*!*********************************************!*\
-  !*** ./src/key-industries-block/block.json ***!
-  \*********************************************/
+/***/ "./src/key-industries-section/block.json":
+/*!***********************************************!*\
+  !*** ./src/key-industries-section/block.json ***!
+  \***********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"key-industries-block/key-industries-block","version":"0.1.0","title":"Key Industries","category":"widgets","icon":"smiley","description":"Key industries block","example":{},"supports":{"html":false},"attributes":{"imageSrc":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"imageAlt":{"type":"string","source":"attribute","selector":"img","attribute":"alt"},"industryHeadline":{"type":"string"},"industryDescription":{"type":"string"}},"textdomain":"key-industries-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"key-industries-section/key-industries-section","version":"0.1.0","title":"Key Industries Section","category":"widgets","icon":"smiley","description":"Section for Key Industries","example":{},"supports":{"html":false},"attributes":{"headline":{"type":"string"}},"textdomain":"key-industries-section","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
@@ -442,8 +377,8 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"key-industries-block/index": 0,
-/******/ 			"key-industries-block/style-index": 0
+/******/ 			"key-industries-section/index": 0,
+/******/ 			"key-industries-section/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -493,7 +428,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["key-industries-block/style-index"], () => (__webpack_require__("./src/key-industries-block/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["key-industries-section/style-index"], () => (__webpack_require__("./src/key-industries-section/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
