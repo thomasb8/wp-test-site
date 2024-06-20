@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "key-industries-section/key-industries-section",
+  "name": "custom-blocks/key-industries-section",
   "version": "0.1.0",
   "title": "Key Industries Section",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "theme",
+  "icon": "grid-view",
   "description": "Section for Key Industries",
   "example": {},
   "supports": {
@@ -19,6 +19,5 @@
   "textdomain": "key-industries-section",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "style": "file:./style-index.css"
 }

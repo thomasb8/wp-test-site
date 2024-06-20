@@ -35,8 +35,8 @@ export default function Edit({ attributes, setAttributes }) {
 	const innerBlocksProps = useInnerBlocksProps({
 		className: 'grid md:grid-cols-3 gap-y-[3.75rem] md:gap-y-[10rem] auto-rows-max'
 	}, {
-		allowedBlocks: ['key-industries-block/key-industries-block'],
-		defaultBlock: { name: 'key-industries-block/key-industries-block' },
+		allowedBlocks: ['custom-blocks/key-industries-block'],
+		defaultBlock: { name: 'custom-blocks/key-industries-block' },
 		directInsert: true
 	})
 	return (

@@ -328,7 +328,7 @@ module.exports = window["wp"]["i18n"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"key-industries-block/key-industries-block","version":"0.1.0","title":"Key Industries","category":"widgets","icon":"smiley","description":"Key industries block","example":{},"supports":{"html":false},"attributes":{"imageSrc":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"imageAlt":{"type":"string","source":"attribute","selector":"img","attribute":"alt"},"industryHeadline":{"type":"string"},"industryDescription":{"type":"string"}},"textdomain":"key-industries-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"custom-blocks/key-industries-block","version":"0.1.0","title":"Key Industries","category":"theme","icon":"media-document","description":"Key industries block","example":{},"supports":{"html":false},"attributes":{"imageSrc":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"imageAlt":{"type":"string","source":"attribute","selector":"img","attribute":"alt"},"industryHeadline":{"type":"string"},"industryDescription":{"type":"string"}},"textdomain":"key-industries-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

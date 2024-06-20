@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/banner-block",
+  "name": "custom-blocks/banner-block",
   "version": "0.1.0",
   "title": "Banner Block",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "theme",
+  "icon": "analytics",
   "description": "Cecils banner block",
   "example": {},
   "supports": {
@@ -38,6 +38,5 @@
   "textdomain": "banner-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "style": "file:./style-index.css"
 }

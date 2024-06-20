@@ -62,9 +62,9 @@ function Edit({
   const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)({
     className: 'grid md:grid-cols-3 gap-y-[3.75rem] md:gap-y-[10rem] auto-rows-max'
   }, {
-    allowedBlocks: ['key-industries-block/key-industries-block'],
+    allowedBlocks: ['custom-blocks/key-industries-block'],
     defaultBlock: {
-      name: 'key-industries-block/key-industries-block'
+      name: 'custom-blocks/key-industries-block'
     },
     directInsert: true
   });
@@ -263,7 +263,7 @@ module.exports = window["wp"]["i18n"];
   \***********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"key-industries-section/key-industries-section","version":"0.1.0","title":"Key Industries Section","category":"widgets","icon":"smiley","description":"Section for Key Industries","example":{},"supports":{"html":false},"attributes":{"headline":{"type":"string"}},"textdomain":"key-industries-section","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"custom-blocks/key-industries-section","version":"0.1.0","title":"Key Industries Section","category":"theme","icon":"grid-view","description":"Section for Key Industries","example":{},"supports":{"html":false},"attributes":{"headline":{"type":"string"}},"textdomain":"key-industries-section","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

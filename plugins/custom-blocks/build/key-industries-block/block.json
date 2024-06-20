@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "key-industries-block/key-industries-block",
+  "name": "custom-blocks/key-industries-block",
   "version": "0.1.0",
   "title": "Key Industries",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "theme",
+  "icon": "media-document",
   "description": "Key industries block",
   "example": {},
   "supports": {
@@ -34,6 +34,5 @@
   "textdomain": "key-industries-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "style": "file:./style-index.css"
 }
