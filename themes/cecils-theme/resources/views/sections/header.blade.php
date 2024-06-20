@@ -1,4 +1,4 @@
-<header class="banner absolute left-0 top-0 w-full">
+<header class="banner absolute left-0 top-0 w-full z-10">
   <div class="container mx-auto h-[7.25rem] flex justify-between items-center font-pill text-white font-semibold leading-none">
     <a class="brand" href="{{ home_url('/') }}">
       <img class="cecils-logo" src="@asset('images/Cecils Concrete_Logo._White.svg')"/ alt="Cecils Logo">

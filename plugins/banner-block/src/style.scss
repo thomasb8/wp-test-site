@@ -1,0 +1,91 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner-content {
+	@apply container;
+	@apply mx-auto;
+	@apply w-full;
+	@apply h-full;
+	@apply font-pill;
+	@apply flex;
+	@apply flex-col;
+	@apply items-start;
+	@apply justify-end;
+	@apply pb-[4rem];
+	@media (screen(md)) {
+		@apply flex-row;
+		@apply items-end;
+		@apply justify-between;
+		@apply pb-[5rem];
+	}
+}
+
+.overlay {
+	@apply absolute;
+	@apply w-full;
+	@apply h-full;
+	@apply bg-gray-400;
+	@apply opacity-55;
+	@apply -z-[1];
+}
+
+.headline {
+	@apply text-white;
+	@apply font-bold;
+
+	@media (screen(md)) {
+		@apply text-[80px];
+		@apply leading-[64px];
+		@apply -tracking-[1.65px];
+	}
+
+	@media (screen(lg)) {
+		@apply text-[120px];
+		@apply leading-[96px];
+		@apply -tracking-[1.65px];
+	}
+
+	@media (screen(xl)) {
+		@apply text-[150px];
+		@apply leading-[120px];
+		@apply -tracking-[4.5px];
+	}
+
+	@apply text-[55px];
+	@apply leading-[50px];
+	@apply -tracking-[1.65px];
+
+}
+
+.cta-button {
+	@apply block;
+	@apply py-[0.5rem];
+	@apply w-[140px];
+	@apply flex-shrink-0;
+	@apply flex-grow-0;
+	@apply text-white;
+	@apply text-[1.125rem];
+	@apply font-bold;
+	@apply text-center;
+	@apply border-light-blue;
+	@apply border-solid;
+	@apply border-2;
+	@apply rounded-full;
+	@apply leading-none;
+	@apply no-underline;
+	@apply font-semibold;
+	@apply whitespace-nowrap;
+	@apply hover:cursor-pointer;
+	@apply mt-[55px];
+	@media (screen(md)) {
+		@apply w-[175px];
+		@apply py-[0.75rem];
+	}
+}
