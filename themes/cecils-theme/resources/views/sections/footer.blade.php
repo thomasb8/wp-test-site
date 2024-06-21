@@ -19,7 +19,7 @@
       ©{{date('Y')}} Cecil’s Concrete
       <span class="hidden md:inline"> / </span>
       <br class="md:hidden" />
-      <a href="#">Privacy Policy</a>
+      <a href="/privacy-policy" target="_blank">Privacy Policy</a>
     </div>
   </div>
 </footer>
