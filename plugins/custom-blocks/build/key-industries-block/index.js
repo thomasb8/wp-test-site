@@ -90,17 +90,19 @@ function Edit({
   })) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: imageSrc,
     alt: imageAlt
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter headline...', 'key-industries-block'),
     value: industryHeadline,
     className: "industry-headline",
+    allowedFormats: [],
     onChange: val => setAttributes({
       industryHeadline: val
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter description...', 'key-industries-block'),
     value: industryDescription,
     className: "industry-description",
+    allowedFormats: [],
     onChange: val => setAttributes({
       industryDescription: val
     })
@@ -126,7 +128,7 @@ function Edit({
     onChange: value => setAttributes({
       industryHeadline: value
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextareaControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Industry description text', 'key-industries-block'),
     value: industryDescription,
     onChange: value => setAttributes({

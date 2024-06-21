@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, MediaUpload, InspectorControls, RichText, URLInput, PlainText } from '@wordpress/block-editor';
+import { useBlockProps, MediaUpload, InspectorControls, RichText, URLInput } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -78,13 +78,13 @@ export default function Edit({ attributes, setAttributes }) {
 					value={headlineText}
 					onChange={(val) => setAttributes({ headlineText: val })}
 					allowedFormats={[]}
-					placeholder={__('Enter heading...', 'sage')}></RichText>
-					<input className="cta-button"
-					tagName="a"
-					style={{ background: 'transparent' }}
-					value={ctaText}
-					onChange={(e) => setAttributes({ ctaText: e.target.value })}
-					placeholder={__('Enter CTA text...', 'sage')}></input>
+					placeholder={__('Enter heading...', 'banner-block')}></RichText>
+				<RichText className="cta-button"
+				tagName="a"
+				allowedFormats={[]}
+				value={ctaText}
+				onChange={(e) => setAttributes({ ctaText: e.target.value })}
+				placeholder={__('Enter CTA text...', 'banner-block')}></RichText>
 			</div>
 		</div>
 	);

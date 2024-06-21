@@ -123,18 +123,16 @@ function Edit({
       headlineText: val
     }),
     allowedFormats: [],
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter heading...', 'sage')
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter heading...', 'banner-block')
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     className: "cta-button",
     tagName: "a",
-    style: {
-      background: 'transparent'
-    },
+    allowedFormats: [],
     value: ctaText,
     onChange: e => setAttributes({
       ctaText: e.target.value
     }),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter CTA text...', 'sage')
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter CTA text...', 'banner-block')
   })));
 }
 

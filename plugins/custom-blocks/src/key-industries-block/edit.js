@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { RichText, useBlockProps, BlockIcon, MediaUpload, PlainText, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, BlockIcon, MediaUpload, InspectorControls, RichText } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,7 +30,7 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 
-import { Button, Placeholder, PanelBody, TextControl } from '@wordpress/components';
+import { Button, Placeholder, PanelBody, TextControl, TextareaControl } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { imageSrc, imageAlt, industryHeadline, industryDescription } = attributes
@@ -50,15 +50,17 @@ export default function Edit({ attributes, setAttributes }) {
 				/>
 			</Placeholder> :
 				<img src={imageSrc} alt={imageAlt} />}
-			<PlainText placeholder={__('Enter headline...', 'key-industries-block')}
+			<RichText placeholder={__('Enter headline...', 'key-industries-block')}
 				value={industryHeadline}
 				className='industry-headline'
-				onChange={(val) => setAttributes({ industryHeadline: val })}></PlainText>
-			<PlainText
+				allowedFormats={[]}
+				onChange={(val) => setAttributes({ industryHeadline: val })}></RichText>
+			<RichText
 				placeholder={__('Enter description...', 'key-industries-block')}
 				value={industryDescription}
 				className='industry-description'
-				onChange={(val) => setAttributes({ industryDescription: val })}></PlainText>
+				allowedFormats={[]}
+				onChange={(val) => setAttributes({ industryDescription: val })}></RichText>
 			<InspectorControls>
 				<PanelBody title={__('Image Settings', 'key-industries-block')}>
 					<MediaUpload
@@ -77,7 +79,7 @@ export default function Edit({ attributes, setAttributes }) {
 						value={industryHeadline}
 						onChange={(value) => setAttributes({ industryHeadline: value })}
 					/>
-					<TextControl
+					<TextareaControl
 						label={__('Industry description text', 'key-industries-block')}
 						value={industryDescription}
 						onChange={(value) => setAttributes({ industryDescription: value })}
