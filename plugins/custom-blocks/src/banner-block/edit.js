@@ -83,7 +83,7 @@ export default function Edit({ attributes, setAttributes }) {
 					tagName="a"
 					style={{ background: 'transparent' }}
 					value={ctaText}
-					onChange={(e) => setAttributes({ ctaText: e.value })}
+					onChange={(e) => setAttributes({ ctaText: e.target.value })}
 					placeholder={__('Enter CTA text...', 'sage')}></input>
 			</div>
 		</div>

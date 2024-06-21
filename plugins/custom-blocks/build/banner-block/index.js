@@ -132,7 +132,7 @@ function Edit({
     },
     value: ctaText,
     onChange: e => setAttributes({
-      ctaText: e.value
+      ctaText: e.target.value
     }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter CTA text...', 'sage')
   })));
